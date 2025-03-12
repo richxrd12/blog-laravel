@@ -5,6 +5,16 @@ use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Mail\MailTest;
+use Illuminate\Support\Facades\Mail;
+
+Route::get('test', function (){
+    Mail::to('richardquintanapadron@gmail.com')->send(
+        new MailTest()
+    );
+
+    return 'Done';
+});
 
 //View principal (Landing page)
 Route::get('/', function () {
