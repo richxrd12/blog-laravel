@@ -15,7 +15,7 @@ Route::get('test', function (){
 
 //View principal (Landing page)
 Route::get('/', function () {
-    return view('landing');
+    return view('index');
 });
 
 //Auth
